@@ -74,3 +74,6 @@ function test_task_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'test_task_scripts' );
+
+
+require_once get_template_directory() . '/inc/post-types/doctors.php';
