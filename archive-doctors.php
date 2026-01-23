@@ -33,6 +33,16 @@ get_header();
                         </h2>
 
                         <?php
+                        $cities = get_the_terms( get_the_ID(), 'doctor_city' );
+
+                        if ( $cities && ! is_wp_error( $cities ) ) {
+                            echo '<p class="doctor-cities">';
+                            echo esc_html( implode( ', ', wp_list_pluck( $cities, 'name' ) ) );
+                            echo '</p>';
+                        }
+                        ?>
+
+                        <?php
                         $specialties = get_the_terms( get_the_ID(), 'doctor_specialization' );
 
                         if ( $specialties && ! is_wp_error( $specialties ) ) :
