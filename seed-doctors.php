@@ -38,6 +38,15 @@ $doctors = [
         'price' => 3400,
         'rating' => 5
     ],
+    [
+        'title'   => 'Сидоров Павел Андреевич',
+        'slug'    => 'sidorov-pavel',
+        'specs'   => ['dentist', 'surgeon'],
+        'city'    => 'yekaterinburg',
+        'exp'     => 15,
+        'price'   => 4200,
+        'rating'  => 5,
+    ],
     ['title' => 'Кузнецов Дмитрий Павлович',     'slug' => 'kuznetsov-dmitry',    'specs' => ['surgeon','therapist'],  'city' => 'moscow',       'exp' => 18, 'price' => 4500, 'rating' => 5],
     ['title' => 'Петрова Анна Игоревна',         'slug' => 'petrova-anna',        'specs' => ['dentist'],              'city' => 'yekaterinburg','exp' => 7,  'price' => 2800, 'rating' => 4],
     ['title' => 'Соколов Владимир Николаевич',   'slug' => 'sokolov-vladimir',    'specs' => ['therapist','dentist'],  'city' => 'novosibirsk',  'exp' => 15, 'price' => 2600, 'rating' => 4],
@@ -138,4 +147,4 @@ foreach ($doctors as $doc) {
     }
 }
 
-die('Скрипт выполнен: добавлены специализации, города и 20 врачей');
+die('Скрипт выполнен: добавлены специализации, города и 21 врача');
