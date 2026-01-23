@@ -79,3 +79,4 @@ add_action( 'wp_enqueue_scripts', 'test_task_scripts' );
 require_once get_template_directory() . '/inc/post-types/doctors.php';
 require_once get_template_directory() . '/inc/taxonomies/specialization.php';
 require_once get_template_directory() . '/inc/taxonomies/city.php';
+require_once get_template_directory() . '/inc/acf/doctors-acf-fields.php';

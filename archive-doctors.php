@@ -33,6 +33,25 @@ get_header();
                         </h2>
 
                         <?php
+                        $experience = get_field( 'doctor_experience' );
+                        $price      = get_field( 'doctor_price' );
+                        $rating     = get_field( 'doctor_rating' );
+                        ?>
+
+                        <?php if ( $experience !== null ) : ?>
+                            <p>Стаж: <?php echo esc_html( $experience ); ?> лет</p>
+                        <?php endif; ?>
+
+                        <?php if ( $price ) : ?>
+                            <p>Цена приёма: <?php echo esc_html( $price ); ?> руб</p>
+                        <?php endif; ?>
+
+                        <?php if ( $rating !== null ) : ?>
+                            <p>Рейтинг: <?php echo esc_html( $rating ); ?> / 5</p>
+                        <?php endif; ?>
+
+
+                        <?php
                         $cities = get_the_terms( get_the_ID(), 'doctor_city' );
 
                         if ( $cities && ! is_wp_error( $cities ) ) {
@@ -58,6 +77,7 @@ get_header();
                             </ul>
                         <?php endif; ?>
 
+                        <hr>
                     </div>
 
                 <?php endwhile; ?>
